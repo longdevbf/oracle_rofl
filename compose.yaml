@@ -1,7 +1,7 @@
 services:
   mycontainer:
     build: .
-    image: "docker.io/longdevdatabase/oracle_rofl:latest@"     # Always provide FQDN image names!
+    image: "docker.io/longdevdatabase/oracle_rofl:latest@sha256:efacccf6359972592510165a905e778b8979f722b537a249d11bb71d8183929b"     # Always provide FQDN image names!
     platform: linux/amd64
     volumes:
       - my-volume:/root/.my-volume              # Persistent per-machine storage.
