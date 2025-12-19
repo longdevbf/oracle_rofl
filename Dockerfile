@@ -5,5 +5,4 @@ RUN apk add --no-cache curl jq
 
 # The entire application is defined as a shell script.
 ADD app.sh /app.sh
-RUN chmod +x /app.sh
 ENTRYPOINT ["/app.sh"]

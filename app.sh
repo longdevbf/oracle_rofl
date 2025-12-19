@@ -15,7 +15,7 @@ while true; do
 
 	# Submit it to the Sapphire contract.
 	curl -s \
-		--json '{"tx": {"kind": "eth", "data": {"gas_limit": 200000, "to": "'${CONTRACT_ADDRESS}'", "value": 0, "data": "'${data}'"}}}' \
+		--json '{"encrypt": false, "tx": {"kind": "eth", "data": {"gas_limit": 200000, "to": "'${CONTRACT_ADDRESS}'", "value": "0", "data": "'${data}'"}}}' \
 		--unix-socket /run/rofl-appd.sock \
   		http://localhost/rofl/v1/tx/sign-submit >/dev/null
     echo "Submitted price to contract ${CONTRACT_ADDRESS}"
